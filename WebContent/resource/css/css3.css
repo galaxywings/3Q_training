@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+
+html{
+	font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/;
+}
+
+/* rwd */
+img, object{
+ max-width: 100%;
+}
+
+body{
+	text-align: center;
+}
+
+.layout{
+	/*border: 2px #ddd solid;*/
+	padding: 5px;
+	width: 90%;
+	margin:auto;
+}
+
+header{
+	border: #aaa 3px solid;
+	background-color: red;
+}
+
+#title_nav{
+	border: #0000ff 0.2rem dotted;
+	margin: 0.5rem;
+	border-radius: 0.5rem;
+	text-align: center;
+	background:-webkit-linear-gradient(top,orange,white);
+	/*background-color: rgb(252, 235, 3);*/
+}
+
+#title_span{
+	font-size:2rem;
+}
+
+form{
+	text-align: center;
+	border: #ddd 3px solid;
+	width: 90%;
+	padding: 15px;
+	border-radius: 15px;
+	margin:auto;
+}
+
+table{
+	text-align: center;
+	width:100%;
+}

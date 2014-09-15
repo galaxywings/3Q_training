@@ -1,0 +1,313 @@
+@CHARSET "UTF-8";
+
+body{
+	text-align: center;
+}
+
+.layout{
+	/*border: 2px #ddd solid;*/
+	padding: 5px;
+	width: 90%;
+	margin:auto;
+}
+
+header{
+	border: #aaa 3px solid;
+	background-color: red;
+}
+
+nav{
+	border: #0000ff 0.1rem solid;
+	margin: 5px;
+	border-radius: 10px;
+	/*background-color: rgb(252, 235, 3);*/
+}
+
+section{
+	border: #123 3px solid;
+	margin: 10px;
+	background-color: rgb(248, 255, 127);
+}
+
+section .article1{
+	background-color: rgb(11, 232, 9);
+	width: 50%;
+}
+section .article2{
+	width: 50%;
+	background-color: rgb(179, 212, 242);
+}
+
+aside{
+	border: 3px solid #78A;
+	background-color: rgb(19, 111, 191);
+	margin: 10px;
+}
+
+footer{
+	border: #FBE1E1 3px solid;
+	background-color: rgb(145, 38, 240);
+}
+
+form{
+	text-align: center;
+	border: #ddd 3px solid;
+	width: 90%;
+	padding: 15px;
+	border-radius: 15px;
+	margin:auto;
+}
+
+table{
+	text-align: center;
+	width:100%;
+}
+
+canvas{
+	border: #ddd 3px solid;
+	margin-top: 10px;
+}
+button{
+	display: block;
+}
+
+.css3Demo{
+	border: #ddd 3px solid;
+	height: 250px;
+	width: 350px;
+	margin-left: 30%;
+	padding-top: 20px;
+}
+
+.clearfix{
+	height: 30px;
+}
+li {
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	width: 20px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	text-align: center;
+	background: #f36;
+	color: green;
+	margin-right: 5px;
+	font-family: sans-serif;
+	list-style-type: none;
+}
+.curve, .line {
+	fill: none;
+	stroke-width: 1px;
+}
+.curve {
+	stroke: red;
+	stroke-width: 3px;
+}
+.control {
+	fill: #ccc;
+	stroke: #000;
+	stroke-width: .5px;
+}
+.t, .controltext {
+	font-size: .6em;
+}
+.layout2{
+	margin-top: 90px;
+}
+.layout2> a{
+	-webkit-transition: background 2s ease-in, color 2s ease-out;
+	background: green;
+	color: yellow;
+}
+
+/* Transform*/
+.menu2 ul {
+    border-top: 15px solid black;
+    padding: 0 10px;    
+ }
+ 
+ .menu2> .clearfix2> li{
+ 	background: none;
+ 	margin-right: 70px;
+ }
+
+ .menu2 ul li a{
+    color: #fff;
+    float: left;
+    margin: 0 5px;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 65px;
+    padding: 10px 5px;
+    background: #151515;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    -moz-box-shadow: 0 0 1px #ccc,inset 0 0 2px #fff;
+    -webkit-box-shadow: 0 0 1px #ccc,inset 0 0 2px #fff;
+    box-shadow: 0 0 1px #ccc,inset 0 0 2px #fff;
+    text-shadow: 0 1px 1px #686868;
+    text-decoration: none;
+ }
+ .menu2 ul li.translate a{
+    background: #2EC7D2;
+ }
+ .menu2 ul li.translate-x a {
+    background: #8FDD21;
+ }
+ .menu2 ul li.translate-y a {
+    background: #F45917;
+ }
+ .menu2 ul li.rotate a {
+    background: #D50E19;
+ }
+ .menu2 ul li.scale a {
+    background: #cdddf2;
+ }
+ .menu2 ul li.scale-x a {
+   background: #0fDD21;
+ }
+ .menu2 ul li.scale-y a {
+   background: #cd5917;
+ }
+ .menu2 ul li.skew a {
+   background: #519;
+ }
+ .menu2 ul li.skew-x a {
+   background: #D50;
+ }
+ .menu2 ul li.skew-y a {
+   background: #E19;
+ }
+ .menu2 ul li.matrix a {
+   background: #919;
+ }  
+ 
+  .menu2 ul li.skew a:hover {
+     -moz-transform: skew(45deg,15deg);
+     -webkit-transform: skew(45deg,15deg);
+     -o-transform: skew(45deg,15deg);
+     -ms-transform: skew(45deg,15deg);
+     transform: skew(45deg,15deg);          
+  }
+  
+    .menu2 ul li.translate a:hover {
+     -moz-transform: translate(-10px,-10px);
+     -webkit-transform: translate(-10px,-10px);
+     -o-transform: translate(-10px,-10px);
+     -ms-transform: translate(-10px, -10px);
+     transform: translate(-10px,-10px);
+  }
+    .menu2 ul li.translate-x a:hover {
+    -moz-transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);          
+  }
+  
+    .menu2 ul li.translate-y a:hover {
+     -moz-transform: translateY(-10px);
+     -webkit-transform: translateY(-10px);
+     -o-transform: translateY(-10px);
+     -ms-transform: translateY(-10px);
+     transform: translateY(-10px);          
+  }
+  
+   .menu2 ul li.rotate a:hover {
+   -moz-transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);          
+ }
+ 
+  .menu2 ul li.scale a:hover {
+   -moz-transform: scale(0.8,0.8);
+   -webkit-transform: scale(0.8,0.8);
+   -o-transform: scale(0.8,0.8);
+   -ms-transform: scale(0.8,0.8);
+   transform: scale(0.8,0.8);          
+ }
+   .menu2 ul li.scale-x a:hover {
+    -moz-transform: scaleX(0.8);
+    -webkit-transform: scaleX(0.8);
+    -o-transform: scaleX(0.8);
+    -ms-transform: scaleX(0.8);
+    transform: scaleX(0.8);          
+ }
+ 
+  .menu2 ul li.scale-y a:hover {
+     -moz-transform: scaleY(1.2);
+     -webkit-transform: scaleY(1.2);
+     -o-transform: scaleY(1.2);
+     -ms-transform: scaleY(1.2);
+     transform: scaleY(1.2);          
+ }
+ 
+   .menu2 ul li.skew a:hover {
+     -moz-transform: skew(45deg,15deg);
+     -webkit-transform: skew(45deg,15deg);
+     -o-transform: skew(45deg,15deg);
+     -ms-transform: skew(45deg,15deg);
+     transform: skew(45deg,15deg);          
+  }
+  
+    .menu2 ul li.skew-x a:hover {
+    -moz-transform: skewX(-30deg);
+    -webkit-transform: skewX(-30deg);
+    -o-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    transform: skewX(-30deg);          
+ }
+ 
+  .menu2 ul li.skew-y a:hover {
+    -moz-transform: skewY(30deg);
+    -webkit-transform: skewY(30deg);
+    -o-transform: skewY(30deg);
+    -ms-transform: skewY(30deg);
+    transform: skewY(30deg);          
+ }
+   .menu2 ul li.matrix a:hover {
+    -moz-transform: matrix(1,1,-1,0,0,0);
+    -webkit-transform: matrix(1,1,-1,0,0,0);
+    -o-transform: matrix(1,1,-1,0,0,0);
+    -ms-transform: matrix(1,1,-1,0,0,0);
+    transform: matrix(1,1,-1,0,0,0);          
+  }
+/*animation*/
+@-webkit-keyframes 'wobble' {
+	0% {
+		margin-left: 100px;
+		background: green;
+		}
+	40% {
+		margin-left: 150px;
+		background: orange;
+		}
+	60% {
+		margin-left: 75px;
+		background: blue;
+		}
+	100% {
+		margin-left: 100px;
+		background: red;
+		}
+}
+
+.demo1{
+	width: 50px;
+	height: 50px;
+	margin-left: 100px;
+	background: blue;
+	-webkit-animation-name:'wobble';/*动画属性名，也就是我们前面keyframes定义的动画名*/
+	-webkit-animation-duration: 10s;/*动画持续时间*/
+	-webkit-animation-timing-function: ease-in-out; /*动画频率，和transition-timing-function是一样的*/
+	-webkit-animation-delay: 2s;/*动画延迟时间*/
+	-webkit-animation-iteration-count: 10;/*定义循环资料，infinite为无限次*/
+	-webkit-animation-direction: alternate;/*定义动画方式*/
+}
