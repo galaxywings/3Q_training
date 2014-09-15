@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 
 
 public class Shopping  extends HttpServlet {
-	
 	   public void init()throws ServletException{      
 	        
 	        Map products = new HashMap();       
