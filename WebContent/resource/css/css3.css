@@ -15,13 +15,13 @@ body{
 
 .layout{
 	/*border: 2px #ddd solid;*/
-	padding: 5px;
+	padding: 0.5rem;
 	width: 90%;
 	margin:auto;
 }
 
 header{
-	border: #aaa 3px solid;
+	border: #aaa 0.3rem solid;
 	background-color: red;
 }
 
@@ -35,19 +35,19 @@ header{
 }
 
 #title_span{
-	font-size:2rem;
+	font-size:3rem;
 }
 
 form{
 	text-align: center;
-	border: #ddd 3px solid;
-	width: 90%;
-	padding: 15px;
-	border-radius: 15px;
+	border: #ddd 0.1rem solid;
+	width: 100%;
+	padding: 1 rem;
 	margin:auto;
 }
 
 table{
 	text-align: center;
 	width:100%;
+	font-size:1.5rem;
 }

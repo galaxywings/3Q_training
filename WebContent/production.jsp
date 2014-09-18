@@ -22,7 +22,8 @@
  <form method="post" action="shopping">
  <table>
  <tr>
- <td><input type="checkbox" value="" name="sam"/></td><td>序号</td><td>产品名称</td><td>产品价格（¥）</td> 
+ <td>
+  <input type="checkbox" value="" name="sam"/></td><td>序号</td><td>产品名称</td><td>产品价格（¥）</td> 
  </tr>
   <input name="nextaction" value="add" type="hidden" />
  <tr>
