@@ -17,6 +17,7 @@ public class MysqlTest {
 				System.out.println(rs.getInt("Id") + "\t"
 						+ rs.getString("goods_name"));
 			}
+			
 			rs.close();
 			s.close();// 释放Statement对象
 			con.close(); // 关闭到MySQL服务器的连接
