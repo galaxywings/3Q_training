@@ -32,6 +32,9 @@ public class Shopping  extends HttpServlet {
 	
     public void doPost(HttpServletRequest request, HttpServletResponse response)
 	        throws ServletException, IOException {
+    	
+    	
+    		
 	        
     		String nextaction = request.getParameter("nextaction");
 	        String proIds[] = request.getParameterValues("proId");
