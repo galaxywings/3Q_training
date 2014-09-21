@@ -15,7 +15,8 @@ public class MysqlTest {
 			ResultSet rs = s.executeQuery("select * from t_goods;"); // 提交查询，返回的表格保存在rs中
 			while (rs.next()) { // ResultSet指针指向下一个“行”
 				System.out.println(rs.getInt("Id") + "\t"
-						+ rs.getString("goods_name"));
+						+ rs.getString("goods_name")+ "\t"
+								+ rs.getBigDecimal("value"));
 			}
 			
 			rs.close();

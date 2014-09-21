@@ -9,53 +9,95 @@
 <link rel="stylesheet" href="resource/css/css3.css"/>
 </head>
 <body>
- <div class="layout"> 
- <!-- title div  -->
-  <div>
      <nav  id="title_nav">
        <span id="title_span">展示商铺1</span>
      </nav>
-  </div>
-  <!-- title div -->
-  
-  <!-- banner begin -->
-  <nav id="banner_nav">
-  
-  </nav>
-  <!-- banner end -->
-  
-  
-  <!-- form div -->
-  <div>
+     
+<div class="layout">
  <form method="post" action="shopping">
   <input name="nextaction" value="add" type="hidden" />
- <table>
- <tr>
- <td>
-  <input type="checkbox" value="" name="sam"/></td><td>序号</td><td>产品名称</td><td>产品价格（¥）</td> 
- </tr>
- <tr>
-  <td><input type="checkbox" value="1" name="proId"/></td><td>1</td> <td>农夫山泉</td> <td>2.0</td>
- </tr>
- <tr>
-  <td><input type="checkbox" value="2" name="proId"/></td><td>2</td> <td>鼠标</td> <td>20.0</td> 
- </tr>
- <tr>
-  <td><input type="checkbox" value="3" name="proId"/></td><td>3</td> <td>笔记本</td> <td>8.0</td>
- </tr>
- <tr>
-  <td colspan="4" align="right">
-    <input name="submit" type="submit" value="添加到购物车" />
-  </td>
- </tr>
- </table>
- </form>
+
+  <div class="row">
+  
+  <div class="goods">
+    <div>
+  	<img alt="农夫山泉" src="resource/img/water.jpg">
+  	</div>
+  	<div class="btns">
+  	 <a class="btn-buy">加入购物车</a>
+  	 <span>农夫山泉&nbsp;&nbsp;&nbsp;￥ 24.9</span>
+  	 <a class="btn-buy" style="float:right">关注</a>
+  	</div>
+  </div>
+  
+  <div class="goods">
+     <div>
+     <img alt="鼠标" src="resource/img/mouse.jpg">
+     </div>
+     <div class ="btns">
+      <a class="btn-buy">加入购物车</a>
+      <input type="hidden" value="2" name="proId"/>
+      <span>鼠标&nbsp;&nbsp;&nbsp;￥20.0</span>
+       <a class="btn-buy" style="float:right">关注</a>
+     </div>
+  </div>
+  
+  <div class="goods">
+    <div>
+     <img alt="笔记本" src="resource/img/laptop.jpg">
+    </div>
+    <div  class ="btns">
+      <a class="btn-buy">加入购物车</a>
+      <input type="hidden" value="3" name="proId"/>
+      <span>笔记本&nbsp;&nbsp;&nbsp;￥3599.0</span>
+       <a class="btn-buy" style="float:right">关注</a>
+    </div>
+  </div>
+  
+  </div>
+  
+    <div class="row">
+  
+  <div class="goods">
+    <div>
+  	<img alt="洗衣机" src="resource/img/xyj.jpg">
+  	</div>
+  	<div class="btns">
+  	 <a class="btn-buy">加入购物车</a>
+  	 <span>洗衣机&nbsp;&nbsp;&nbsp;￥ 4000</span>
+  	 <a class="btn-buy" style="float:right">关注</a>
+  	</div>
+  </div>
+  
+  <div class="goods">
+     <div>
+     <img alt="饮水机" src="resource/img/ysj.jpg">
+     </div>
+     <div class ="btns">
+      <a class="btn-buy">加入购物车</a>
+      <input type="hidden" value="2" name="proId"/>
+      <span>饮水机&nbsp;&nbsp;&nbsp;￥280.0</span>
+       <a class="btn-buy" style="float:right">关注</a>
+     </div>
+  </div>
+  
+  <div class="goods">
+    <div>
+     <img alt="电话机" src="resource/img/phone.jpg">
+    </div>
+    <div  class ="btns">
+      <a class="btn-buy">加入购物车</a>
+      <input type="hidden" value="3" name="proId"/>
+      <span>电话机&nbsp;&nbsp;&nbsp;￥78.0</span>
+       <a class="btn-buy" style="float:right">关注</a>
+    </div>
+  </div>
+  
+  </div>
+   </form>
  </div>
- <!-- form div -->
- 
- 
- </div>
-</body>
+ <footer>商品最终解释权归商铺所有</footer>
+  </body>
 <script type="text/javascript">
 </script>
 </html>

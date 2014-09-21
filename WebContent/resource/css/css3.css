@@ -11,13 +11,16 @@ img, object{
 
 body{
 	text-align: center;
+	height:700px;
+	background-image: url(../img/bgpic.jpg);
 }
 
 .layout{
 	/*border: 2px #ddd solid;*/
 	padding: 0.5rem;
-	width: 90%;
+	width: 75%;
 	margin:auto;
+	height: 90%;
 }
 
 header{
@@ -28,9 +31,11 @@ header{
 #title_nav{
 	border: #0000ff 0.2rem dotted;
 	margin: 0.5rem;
+	width: 75%;
 	border-radius: 0.5rem;
 	text-align: center;
 	background:-webkit-linear-gradient(top,orange,white);
+	margin:auto;
 	/*background-color: rgb(252, 235, 3);*/
 }
 
@@ -48,9 +53,9 @@ header{
 
 form{
 	text-align: center;
-	border: #ddd 0.1rem solid;
+	/*border: #ddd 0.1rem solid;*/
 	width: 100%;
-	padding: 1 rem;
+	/* padding: 1 rem;*/
 	margin:auto;
 }
 
@@ -58,4 +63,48 @@ table{
 	text-align: center;
 	width:100%;
 	font-size:1.5rem;
+}
+
+div.goods{
+	width:31%;
+	float:left;
+	background-color: white;
+	padding: 1rem;
+}
+
+div.row{
+	width:100%;
+}
+
+div.btns {
+width:75%;
+height: 2rem;
+margin-top: 1 rem;
+text-align: center;
+overflow: hidden;
+zoom: 1;
+line-height: 1.8rem;
+ margin:0 auto;
+}
+
+a.btn-buy{
+float: left;
+height: 1.9 rem;
+padding: 0 1rem;
+border: 0.1rem solid #ddd;
+border-radius: 0.2rem;
+margin: 0 0.4rem 0 0;
+background: #F7F7F7;
+line-height: 1.8rem;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+color: #333;
+background: -webkit-gradient(linear,0 0,0 100%,from(#f7f7f7),to(#f2f2f2));
+}
+
+
+footer{
+	background-color: white;
+	font-size:2rem;
 }
