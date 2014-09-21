@@ -12,7 +12,7 @@
      <nav  id="title_nav">
        <span id="title_span">展示商铺1</span>
      </nav>
-     
+<div>
 <div class="layout">
  <form method="post" action="shopping">
   <input name="nextaction" value="add" type="hidden" />
@@ -96,7 +96,29 @@
   </div>
    </form>
  </div>
- <footer>商品最终解释权归商铺所有</footer>
+ <div class="login">
+ <form action="">
+ <table>
+   <tr>
+    <td>用户名</td><td><input type="text" value="" /></td>
+   </tr>
+   <tr>
+     <td>密码</td><td><input type="password" value="" /></td>
+   </tr>
+   <tr><td colspan="2"><a class="btn-buy" style="width:80%">登录</a></td></tr>
+ </table>
+ </form>
+ 
+   <div class="logo">
+  	<img alt="农夫山泉" src="resource/img/logo1.jpg" />
+   </div>
+ </div>
+ 
+
+ 
+ </div>     
+ 
+
   </body>
 <script type="text/javascript">
 </script>

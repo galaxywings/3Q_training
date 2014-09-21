@@ -19,8 +19,31 @@ body{
 	/*border: 2px #ddd solid;*/
 	padding: 0.5rem;
 	width: 75%;
-	margin:auto;
+	margin-top:1rem;
+	margin-left:4rem;
+	margin-right:0.5rem;
 	height: 90%;
+	float:left;
+	border-radius: 0.5rem;
+}
+
+.login{
+	padding: 0.5rem;
+	margin-left:0.5rem;
+	margin-top:1rem;
+	margin-right:2rem;
+	width: 17%;
+	height: 90%;
+	float:right;
+	background-color: white;
+	border-radius: 0.5rem;
+}
+
+.logo{
+	padding: 1rem;
+	margin-left:1rem;
+	margin-top:1rem;
+	margin-right:2rem;
 }
 
 header{
@@ -31,7 +54,7 @@ header{
 #title_nav{
 	border: #0000ff 0.2rem dotted;
 	margin: 0.5rem;
-	width: 75%;
+	width: 90%;
 	border-radius: 0.5rem;
 	text-align: center;
 	background:-webkit-linear-gradient(top,orange,white);
