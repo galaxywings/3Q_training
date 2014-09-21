@@ -19,6 +19,7 @@ public class MysqlTest {
 								+ rs.getBigDecimal("value"));
 			}
 			
+			s.executeUpdate("insert into t_map values ('1','1','1')");
 			rs.close();
 			s.close();// 释放Statement对象
 			con.close(); // 关闭到MySQL服务器的连接
