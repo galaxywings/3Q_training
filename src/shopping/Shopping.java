@@ -50,7 +50,8 @@ public class Shopping  extends HttpServlet {
 			Statement s = con.createStatement(); // Statement类用来提交SQL语句
 			
 			
-			ResultSet rs = s.executeQuery("select * from t_goods;"); // 提交查询，返回的表格保存在rs中
+			ResultSet rs = s.executeQuery("select * from t_goods;"); // 物品列表
+			ResultSet rsCart = s.executeQuery("select * from t_map where cart_id='';"); //该购物车列表
 			while (rs.next()) { // ResultSet指针指向下一个“行”
 //				System.out.println(rs.getInt("Id") + "\t"
 //						+ rs.getString("goods_name")+ "\t"
@@ -58,12 +59,14 @@ public class Shopping  extends HttpServlet {
 				products.put(rs.getString("Id"), new Product(rs.getString("Id"),rs.getString("goods_name"),"",rs.getDouble("value")));
 			}
 			
+			
+			
 			rs.close();
-			s.close();// 释放Statement对象
-			con.close(); // 关闭到MySQL服务器的连接
-		} catch (ClassNotFoundException cnf_e) { // 如果找不到驱动类
+			s.close();
+			con.close(); 
+		} catch (ClassNotFoundException cnf_e) { 
 			System.out.println("Driver Not Found: " + cnf_e);
-		} catch (SQLException sql_e) { // 都是SQLException
+		} catch (SQLException sql_e) { 
 			System.out.println(sql_e);
 		}
 		
