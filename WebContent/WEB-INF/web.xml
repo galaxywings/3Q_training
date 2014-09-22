@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app id="WebApp_ID">
+
 	<display-name>ShoppingCart</display-name>
 	<welcome-file-list>
 		<welcome-file>production.jsp</welcome-file>
 	</welcome-file-list>
+	
 	<servlet>
 	   <servlet-name>ShoppingServlet</servlet-name>
 	   <servlet-class>shopping.Shopping</servlet-class>
@@ -11,5 +13,55 @@
 	<servlet-mapping>
 	   <servlet-name>ShoppingServlet</servlet-name>
 	   <url-pattern>/shopping</url-pattern>
-	 </servlet-mapping>
+	</servlet-mapping>
+	
+	<servlet>
+	   <servlet-name>LoginServlet</servlet-name>
+	   <servlet-class>shopping.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	   <servlet-name>LoginServlet</servlet-name>
+	   <url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	
+	
+	 
+<!-- Log4j的配置(在同一容器中部署多个应用时，
+    不能使用默认的webAppRootKey,必须指定唯一KEY,以免冲突) 
+
+<context-param>
+    <param-name>webAppRootKey</param-name>
+    <param-value>springmvc.root</param-value>
+</context-param>
+
+  <context-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>WEB-INF/jdbc-context.xml</param-value>
+  </context-param>  
+
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <servlet>
+  	<servlet-name>spring-mvc</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>spring-mvc</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>encodingFilter</filter-name>
+  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>encodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  -->	  
 </web-app>

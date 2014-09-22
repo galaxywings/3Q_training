@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"    pageEncoding="utf-8"%>
-
+<%@ page language="java" import="java.util.*"  %>
+<%@ page language="java" import="shopping.*" %>
+<%@ page language="java" import="org.springframework.util.StringUtils" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,16 +102,24 @@
  </section>
  
  <section class="login">
- <form action="">
+ <form  id="userForm" method="post" action="login">
  <table>
+<% 
+ String userid = (String)request.getSession().getAttribute("userid");
+ String result = (String)request.getAttribute("result");
+if(StringUtils.isEmpty(userid)){ 
+%>
    <tr>
-    <td>用户名</td><td><input type="text" value="" /></td>
+    <td>用户名</td><td><input type="text" name="userid" value="" style="width:80%"/></td>
    </tr>
    <tr>
-     <td>密码</td><td><input type="password" value="" /></td>
+     <td>密码</td><td><input type="password" name="password" value="" style="width:80%"/></td>
    </tr>
-   <tr><td colspan="2"><a class="btn-buy" style="width:80%">登录</a></td></tr>
+   <tr><td colspan="2"><a class="btn-buy" onclick="login()" style="width:80%">登录</a></td></tr>
+ <% } else{ %>
+   <tr><td colspan="2">欢迎你！<%=userid %></td></tr>
    <tr><td colspan="2"><a class="btn-buy" onclick="goCart();" style="width:80%">去购物车</a></td></tr>
+ <% } %>
  </table>
  </form>
  
@@ -123,6 +133,16 @@
 
   </body>
 <script type="text/javascript">
+$(document).ready(function(){
+	var result = "<%=result%>";
+	if(result=="success"){
+		alert("登录成功!");
+	}else if(result=="fail"){
+		alert("用户名或密码不正确!");
+	}
+})
+
+
 function focusOn(){
 	alert("关注成功");
 }
@@ -147,6 +167,16 @@ function goCart(){
 		$("#goodsForm").submit();
 	}
 
+}
+
+function login(){
+	var userid = $("input[name=userid]").val();
+	var password = $("input[name=password]").val();
+	if(userid==""||password==""){
+		alert("用户名密码不能为空");
+	}else{
+		$("#userForm").submit();
+	}
 }
 
 </script>

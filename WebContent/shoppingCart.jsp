@@ -15,7 +15,7 @@
  </tr>
  <input name="nextaction" value="del" type="hidden" />
  <% 
-    Map shopCart = (Map)request.getSession().getAttribute("shopCart");
+    Map shopCart = (Map)request.getAttribute("shopCart");
  	Iterator it = shopCart.keySet().iterator(); 
  	int i = 0;
  	double total = 0.0;

@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -43,58 +44,62 @@ public class Shopping  extends HttpServlet {
 	        throws ServletException, IOException {
     	
     	Map products = new HashMap();
-    	
+    	Map shopCart =  new HashMap();
+    	LinkedList<String> cartIds = new LinkedList<String>();
+    	String userid = (String)request.getSession().getAttribute("userid");
 		try {
 			Class.forName(JDriver);
 			Connection con = DriverManager.getConnection(conURL, "root","123456"); // 连接数据库
-			Statement s = con.createStatement(); // Statement类用来提交SQL语句
-			
+			Statement s = con.createStatement(); 
 			
 			ResultSet rs = s.executeQuery("select * from t_goods;"); // 物品列表
-			ResultSet rsCart = s.executeQuery("select * from t_map where cart_id='';"); //该购物车列表
-			while (rs.next()) { // ResultSet指针指向下一个“行”
-//				System.out.println(rs.getInt("Id") + "\t"
-//						+ rs.getString("goods_name")+ "\t"
-//								+ rs.getBigDecimal("value"));
+			while (rs.next()) { 
 				products.put(rs.getString("Id"), new Product(rs.getString("Id"),rs.getString("goods_name"),"",rs.getDouble("value")));
 			}
 			
+			Statement ss = con.createStatement(); 
+			ResultSet rsCart = ss.executeQuery("select goods_id from t_map where cart_id= (select id from t_cart where user_id='"+userid+"');"); //该购物车列表
+			while (rsCart.next()) { 
+				cartIds.add(rs.getString("goods_id"));
+			}
 			
 			
+	        String car =request.getParameter("cart");
+	        String[] proIds = car.split(",");
+	       
+	        for(int i= proIds.length-1;i>=0;i--){
+	        	cartIds.add(proIds[i]);
+	        }
+	        
+	          if(products.size()>0){
+	            for(int i=cartIds.size()-1;i>=0;i--){
+	                Product product = (Product)products.get(cartIds.get(i));             
+	                if(shopCart.get(cartIds.get(i))==null){//the product isn't in shopCart
+	                	shopCart.put(cartIds.get(i), product);
+	                }                
+	            }
+	          }
+	         
+	          //更新购物车
+	          Statement s1 = con.createStatement();
+	          s1.execute("detele from t_map where cart_id= (select id from t_cart where user_id='"+userid+"');");
+	          
 			rs.close();
+			rsCart.close();
 			s.close();
+			ss.close();
 			con.close(); 
 		} catch (ClassNotFoundException cnf_e) { 
 			System.out.println("Driver Not Found: " + cnf_e);
 		} catch (SQLException sql_e) { 
 			System.out.println(sql_e);
 		}
-		
-		String nextaction = request.getParameter("nextaction");
-        String car =request.getParameter("cart");
-        String[] proIds = car.split(",");
+        
         ServletContext context = getServletContext();
-        
-        Map shopCart = (Map)request.getSession().getAttribute("shopCart");
-        if(shopCart == null){
-            shopCart = new HashMap();
-        }       
-        if(nextaction.equals("add")&&proIds!=null){
-            for(int i=0;i<proIds.length;i++){
-                Product product = (Product)products.get(proIds[i]);             
-                if(shopCart.get(proIds[i])==null){//the product isn't in shopCart
-                	shopCart.put(proIds[i], product);
-                }                
-            }
-        }else if(nextaction.equals("del")&&proIds!=null){
-            for(int i=0;i<proIds.length;i++){
-            	 shopCart.remove(proIds[i]);
-            }
-        }           
-        
-        request.getSession().setAttribute("shopCart", shopCart);
+        request.setAttribute("shopCart", shopCart);
         RequestDispatcher dispatcher = context.getRequestDispatcher("/shoppingCart.jsp");
-        dispatcher.forward(request, response);      
+        dispatcher.forward(request, response); 
+        
 	    }
 	
 }
