@@ -119,7 +119,6 @@ if(StringUtils.isEmpty(userid)){
  <% } else{ %>
    <tr><td colspan="2">欢迎你！<%=userid %></td></tr>
    <tr><td colspan="2"><a class="btn-buy" onclick="goCart();" style="width:80%">去购物车</a></td></tr>
-   
  <% } %>
  </table>
  <input type="hidden" name="userid" value="<%=userid %>">
