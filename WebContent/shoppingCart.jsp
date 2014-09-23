@@ -12,7 +12,8 @@
 <body>
  <h1>购物车</h1>
  <form method="post" action="updateCart">
- <table class="cart" border="0">
+
+ <table class="cart" >
  <tr bgcolor="#FF8040">
  <td><input type="checkbox" value="" name="sam"/></td>
  <td>序号</td>
@@ -22,6 +23,7 @@
  </tr>
  <% 
     Map shopCart = (Map)request.getAttribute("shopCart");
+    String cartId = (String)request.getAttribute("cartId");
  	Iterator it = shopCart.keySet().iterator(); 
  	int i = 0;
  	double total = 0.0;
@@ -36,21 +38,23 @@
  %>
  <tr>
   <td><input type="checkbox" value="<%=proId %>" name="proId"/></td>
-  <td><img src="resource/img/<%=proId %>" ></td>
   <td><%=order %></td>
+  <td><img src="resource/img/<%=proId %>.jpg" ></td>
   <td><%=name %></td>
   <td><%=value %></td>
  </tr>
  <%
  	}
  %>
+ 
   <tr>
-  <td colspan="3" align="right">总价</td><td><%=total %></td>
+  <td colspan="4" align="right">总价</td><td style="color:red;"><%=total %></td>
  </tr>
  <tr>
-  <td colspan="4" align="right"><input name="submit" type="submit" value="删除所选商品" /></td>
+  <td colspan="4"><a class="btn-buy" href="production.jsp">返回商铺</a>&nbsp;</td><td><input name="submit" type="submit" value="删除所选商品" /></td>
  </tr>
 </table>
+  <input name="cartId" value="<%=cartId %>" type="hidden" />
 </form>
 </body>
 </html>

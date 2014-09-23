@@ -119,6 +119,8 @@ public class Shopping  extends HttpServlet {
 				rsCart.close();
 				s.close();
 				ss.close();
+				
+				request.setAttribute("cartId", cartId);
 		} catch (SQLException sql_e) { 
 			System.out.println(sql_e);
 		} catch (ClassNotFoundException e) {

@@ -23,7 +23,7 @@
   <div class="row">
   <div class="goods">
     <div>
-  	<img alt="农夫山泉" src="resource/img/water.jpg">
+  	<img alt="农夫山泉" src="resource/img/1.jpg">
   	</div>
   	<div class="btns">
   	 <input type="hidden" value="1" name="proId"/>
@@ -35,7 +35,7 @@
   
   <div class="goods">
      <div>
-     <img alt="鼠标" src="resource/img/mouse.jpg">
+     <img alt="鼠标" src="resource/img/2.jpg">
      </div>
      <div class ="btns">
       <a class="btn-buy" onclick="buyToCart(this)">加入购物车</a>
@@ -47,7 +47,7 @@
   
   <div class="goods">
     <div>
-     <img alt="笔记本" src="resource/img/laptop.jpg">
+     <img alt="笔记本" src="resource/img/3.jpg">
     </div>
     <div  class ="btns">
       <a class="btn-buy" onclick="buyToCart(this)">加入购物车</a>
@@ -63,7 +63,7 @@
   
   <div class="goods">
     <div>
-  	<img alt="洗衣机" src="resource/img/xyj.jpg">
+  	<img alt="洗衣机" src="resource/img/4.jpg">
   	</div>
   	<div class="btns">
   	<input type="hidden" value="4" name="proId"/>
@@ -75,10 +75,10 @@
   
   <div class="goods">
      <div>
-     <img alt="饮水机" src="resource/img/ysj.jpg">
+     <img alt="饮水机" src="resource/img/5.jpg">
      </div>
      <div class ="btns">
-      <a class="btn-buy" onclick="buyToCart(this)">加入购p物车</a>
+      <a class="btn-buy" onclick="buyToCart(this)">加入购物车</a>
       <input type="hidden" value="5" name="proId"/>
       <span>饮水机&nbsp;&nbsp;&nbsp;￥280.0</span>
        <a class="btn-buy" onclick="focusOn();" style="float:right">关注</a>
@@ -87,7 +87,7 @@
   
   <div class="goods">
     <div>
-     <img alt="电话机" src="resource/img/phone.jpg">
+     <img alt="电话机" src="resource/img/6.jpg">
     </div>
     <div  class ="btns">
       <a class="btn-buy" onclick="buyToCart(this)">加入购物车</a>
@@ -121,6 +121,7 @@ if(StringUtils.isEmpty(userid)){
    <tr><td colspan="2"><a class="btn-buy" onclick="goCart();" style="width:80%">去购物车</a></td></tr>
  <% } %>
  </table>
+ <input type="hidden" name="userid" value="<%=userid %>">
  </form>
  
    <div class="logo">
@@ -148,15 +149,20 @@ function focusOn(){
 }
 
 function buyToCart(obj){
-	var goodsId = $(obj).parent().find("input[name=proId]").val();
-	var cart = $("input[name=cart]").val();
-	var ifExist = cart.indexOf(goodsId);
-	if(ifExist!=-1){
-		alert("该物品已在购物车中！");
-	}else{
-	$("input[name=cart]").val(cart+goodsId+",")
-	   alert("已添加到购物车");
-	}
+   if($("input[name=userid]").val()!=""){
+		var goodsId = $(obj).parent().find("input[name=proId]").val();
+		var cart = $("input[name=cart]").val();
+		var ifExist = cart.indexOf(goodsId);
+		if(ifExist!=-1){
+			alert("该物品已在购物车中！");
+		}else{
+		$("input[name=cart]").val(cart+goodsId+",")
+		   alert("已添加到购物车");
+		}
+   }else{
+	   alert("请先登录");
+	   return;
+   }
 }
 
 function goCart(){
