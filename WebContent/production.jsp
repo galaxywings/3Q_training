@@ -119,14 +119,14 @@ if(StringUtils.isEmpty(userid)){
  <% } else{ %>
    <tr><td colspan="2">欢迎你！<%=userid %></td></tr>
    <tr><td colspan="2"><a class="btn-buy" onclick="goCart();" style="width:80%">去购物车</a></td></tr>
-   
+   <tr><td colspan="2"><a class="btn-buy" href="production1.jsp" style="width:80%">去商铺2</a></td></tr>
  <% } %>
  </table>
  <input type="hidden" name="userid" value="<%=userid %>">
  </form>
  
    <div class="logo">
-  	<img alt="农夫山泉" src="resource/img/logo1.jpg" />
+  	<img alt="logo" src="resource/img/logo1.jpg" />
    </div>
  </section>
  

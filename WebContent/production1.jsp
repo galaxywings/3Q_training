@@ -13,7 +13,7 @@
 </head>
 <body>
      <nav  id="title_nav">
-       <span id="title_span">展示商铺1</span>
+       <span id="title_span">展示商铺2</span>
      </nav>
 <section>
 <section class="layout">
@@ -23,80 +23,39 @@
   <div class="row">
   <div class="goods">
     <div>
-  	<img alt="农夫山泉" src="resource/img/1.jpg">
+  	<img alt="户外鞋" src="resource/img/21.jpg">
   	</div>
   	<div class="btns">
-  	 <input type="hidden" value="1" name="proId"/>
+  	 <input type="hidden" value="21" name="proId"/>
   	 <a class="btn-buy" onclick="buyToCart(this)">加入购物车</a>
-  	 <span>农夫山泉&nbsp;&nbsp;&nbsp;￥ 24.9</span>
+  	 <span>户外鞋&nbsp;&nbsp;&nbsp;￥ 300</span>
   	 <a class="btn-buy" onclick="focusOn();"  style="float:right">关注</a>
   	</div>
   </div>
   
   <div class="goods">
      <div>
-     <img alt="鼠标" src="resource/img/2.jpg">
+     <img alt="背包" src="resource/img/22.jpg">
      </div>
      <div class ="btns">
       <a class="btn-buy" onclick="buyToCart(this)">加入购物车</a>
-      <input type="hidden" value="2" name="proId"/>
-      <span>鼠标&nbsp;&nbsp;&nbsp;￥20.0</span>
+      <input type="hidden" value="22" name="proId"/>
+      <span>背包&nbsp;&nbsp;&nbsp;￥69.0</span>
        <a class="btn-buy" onclick="focusOn();" style="float:right">关注</a>
      </div>
   </div>
   
-  <div class="goods">
-    <div>
-     <img alt="笔记本" src="resource/img/3.jpg">
-    </div>
-    <div  class ="btns">
-      <a class="btn-buy" onclick="buyToCart(this)">加入购物车</a>
-      <span>笔记本&nbsp;&nbsp;&nbsp;￥3599.0</span>
-       <input type="hidden" value="3" name="proId"/>
-       <a class="btn-buy" onclick="focusOn();" style="float:right">关注</a>
-    </div>
-  </div>
-  
-  </div>
-  
-    <div class="row">
-  
-  <div class="goods">
-    <div>
-  	<img alt="洗衣机" src="resource/img/4.jpg">
-  	</div>
-  	<div class="btns">
-  	<input type="hidden" value="4" name="proId"/>
-  	 <a class="btn-buy"  onclick="buyToCart(this)">加入购物车</a>
-  	 <span>洗衣机&nbsp;&nbsp;&nbsp;￥ 4000</span>
-  	 <a class="btn-buy" onclick="focusOn();" style="float:right">关注</a>
-  	</div>
-  </div>
-  
-  <div class="goods">
+   <div class="goods">
      <div>
-     <img alt="饮水机" src="resource/img/5.jpg">
+     <img alt="帐篷" src="resource/img/23.jpg">
      </div>
      <div class ="btns">
       <a class="btn-buy" onclick="buyToCart(this)">加入购物车</a>
-      <input type="hidden" value="5" name="proId"/>
-      <span>饮水机&nbsp;&nbsp;&nbsp;￥280.0</span>
+      <input type="hidden" value="23" name="proId"/>
+      <span>帐篷&nbsp;&nbsp;&nbsp;￥98.0</span>
        <a class="btn-buy" onclick="focusOn();" style="float:right">关注</a>
      </div>
   </div>
-  
-  <div class="goods">
-    <div>
-     <img alt="电话机" src="resource/img/6.jpg">
-    </div>
-    <div  class ="btns">
-      <a class="btn-buy" onclick="buyToCart(this)">加入购物车</a>
-      <input type="hidden" value="6" name="proId"/>
-      <span>电话机&nbsp;&nbsp;&nbsp;￥78.0</span>
-       <a class="btn-buy" onclick="focusOn();" style="float:right">关注</a>
-    </div>
-  </div>
-  
   </div>
    </form>
  </section>
@@ -106,6 +65,7 @@
  <table>
 <% 
  String userid = (String)request.getSession().getAttribute("userid");
+ String type   = (String)request.getSession().getAttribute("type");
  String result = (String)request.getAttribute("result");
 if(StringUtils.isEmpty(userid)){ 
 %>
@@ -119,13 +79,14 @@ if(StringUtils.isEmpty(userid)){
  <% } else{ %>
    <tr><td colspan="2">欢迎你！<%=userid %></td></tr>
    <tr><td colspan="2"><a class="btn-buy" onclick="goCart();" style="width:80%">去购物车</a></td></tr>
+   <tr><td colspan="2"><a class="btn-buy" href="production1.jsp" style="width:80%">去商铺1</a></td></tr>
  <% } %>
  </table>
  <input type="hidden" name="userid" value="<%=userid %>">
  </form>
  
    <div class="logo">
-  	<img alt="农夫山泉" src="resource/img/logo1.jpg" />
+  	<img alt="logo" src="resource/img/logo2.jpg" />
    </div>
  </section>
  

@@ -48,6 +48,8 @@ public class Login  extends HttpServlet {
 			ResultSet rs = s.executeQuery("select * from t_user where user_id ='"+userid+"' and password='"+password+"';");
 			
 			if(rs.next()){
+				rs.absolute(1);
+				request.getSession().setAttribute("type", rs.getString("type"));
 				request.getSession().setAttribute("userid", userid);
 				request.setAttribute("result", "success");
 			}else{
