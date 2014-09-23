@@ -78,7 +78,7 @@
      <img alt="饮水机" src="resource/img/ysj.jpg">
      </div>
      <div class ="btns">
-      <a class="btn-buy" onclick="buyToCart(this)">加入购物车</a>
+      <a class="btn-buy" onclick="buyToCart(this)">加入购p物车</a>
       <input type="hidden" value="5" name="proId"/>
       <span>饮水机&nbsp;&nbsp;&nbsp;￥280.0</span>
        <a class="btn-buy" onclick="focusOn();" style="float:right">关注</a>
@@ -160,13 +160,7 @@ function buyToCart(obj){
 }
 
 function goCart(){
-	var cart = $("input[name=cart]").val();
-	if(cart==""){
-		alert("请选择商品！");
-	}else{
-		$("#goodsForm").submit();
-	}
-
+	$("#goodsForm").submit();
 }
 
 function login(){

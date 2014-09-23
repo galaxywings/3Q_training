@@ -24,8 +24,25 @@
 	   <url-pattern>/login</url-pattern>
 	</servlet-mapping>
 	
-	
-	 
+   <servlet>
+	   <servlet-name>UpdateServlet</servlet-name>
+	   <servlet-class>shopping.UpdateCart</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	   <servlet-name>UpdateServlet</servlet-name>
+	   <url-pattern>/updateCart</url-pattern>
+	</servlet-mapping>
+
+<!--
+	<servlet>
+	   <servlet-name>Welcome</servlet-name>
+	   <servlet-class>shopping.Welcome</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	   <servlet-name>WelcomeServlet</servlet-name>
+	   <url-pattern>/welcome</url-pattern>
+	</servlet-mapping>
+  -->	 
 <!-- Log4j的配置(在同一容器中部署多个应用时，
     不能使用默认的webAppRootKey,必须指定唯一KEY,以免冲突) 
 
