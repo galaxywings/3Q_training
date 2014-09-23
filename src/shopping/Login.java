@@ -53,7 +53,7 @@ public class Login  extends HttpServlet {
 				request.getSession().setAttribute("userid", userid);
 				request.setAttribute("result", "success");
 			}else{
-				request.getSession().setAttribute("result", "fail");
+				request.setAttribute("result", "fail");
 				
 			}
 			
