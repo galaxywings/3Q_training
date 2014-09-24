@@ -24,7 +24,7 @@ import org.springframework.util.StringUtils;
 
 public class UpdateCart extends HttpServlet {
 	private final static String JDriver = "com.mysql.jdbc.Driver"; // MySQL提供的JDBC驱动，要保证它在CLASSPATH里可见
-	private final static String conURL = "jdbc:mysql://192.168.1.7:3306/3Q_training"; // 本地计算机上的MySQL数据库Company的URL
+	private final static String conURL = "jdbc:mysql://9.115.93.73:3306/3Q_training"; // 本地计算机上的MySQL数据库Company的URL
 	private final static String updateCart = "delete from t_map where goods_id = ? and cart_id = ?";
 
 	public void init() throws ServletException {

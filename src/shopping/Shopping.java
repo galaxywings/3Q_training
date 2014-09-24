@@ -29,10 +29,9 @@ import org.springframework.util.StringUtils;
 public class Shopping  extends HttpServlet {
 	
 	private final static String JDriver = "com.mysql.jdbc.Driver"; // MySQL提供的JDBC驱动，要保证它在CLASSPATH里可见
-	private final static String conURL = "jdbc:mysql://192.168.1.7:3306/3Q_training"; // 本地计算机上的MySQL数据库Company的URL
+	private final static String conURL = "jdbc:mysql://9.115.93.73:3306/3Q_training"; // 本地计算机上的MySQL数据库Company的URL
 	private final static String updateCart ="insert into t_map values (?,?,?)"; 
 	   public void init()throws ServletException{      
-	        
 //	        Map products = new HashMap();       
 //	        products.put("1", new Product("1","农夫山泉","",2.0));          
 //	        products.put("2", new Product("2","鼠标","",20.0));        

@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class MysqlTest {
 	String JDriver = "com.mysql.jdbc.Driver"; // MySQL提供的JDBC驱动，要保证它在CLASSPATH里可见
-	String conURL = "jdbc:mysql://192.168.1.7:3306/3Q_training"; // 本地计算机上的MySQL数据库Company的URL
+	String conURL = "jdbc:mysql://9.115.93.73:3306/3Q_training"; // 本地计算机上的MySQL数据库Company的URL
 
 	public void Mysql() {
 		try {
@@ -31,9 +31,9 @@ public class MysqlTest {
 	}
 
 	public static void main(String[] args) {
-//		MysqlTest t = new MysqlTest();
-//		t.Mysql();
-		String[] s = "".trim().split(",");
-		System.out.println("111"+s[0]);
+		MysqlTest t = new MysqlTest();
+		t.Mysql();
+//		String[] s = "".trim().split(",");
+//		System.out.println("111"+s[0]);
 	}
 }

@@ -116,6 +116,7 @@ if(StringUtils.isEmpty(userid)){
      <td>密码</td><td><input type="password" name="password" value="" style="width:80%"/></td>
    </tr>
    <tr><td colspan="2"><a class="btn-buy" onclick="login()" style="width:80%">登录</a></td></tr>
+   <tr><td colspan="2"><a class="btn-buy" href="production1.jsp" style="width:80%">去商铺2</a></td></tr>
  <% } else{ %>
    <tr><td colspan="2">欢迎你！<%=userid %></td></tr>
    <tr><td colspan="2"><a class="btn-buy" onclick="goCart();" style="width:80%">去购物车</a></td></tr>
@@ -127,6 +128,11 @@ if(StringUtils.isEmpty(userid)){
  
    <div class="logo">
   	<img alt="logo" src="resource/img/logo1.jpg" />
+   </div>
+   <div>
+    <span>
+      本商铺出售各类家电。您的评论对我们非常重要，您收到货后麻烦先验货在签收，如果在商品使用过程中，出现任何问题，请不要轻易给我们中差评，联系我们在线客服或者027-84733006，我们都会第一时间及时为您处理的，您对宝贝和服务的满意，是我们一直的坚持，感谢您的支持！
+    </span>
    </div>
  </section>
  
