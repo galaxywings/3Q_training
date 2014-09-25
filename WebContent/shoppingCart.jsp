@@ -11,7 +11,7 @@
 </head>
 <body class="cart">
  <h1>购物车</h1>
- <form method="post" action="updateCart">
+ <form method="post" id="cartForm" action="updateCart">
 
  <table class="cart" >
  <tr bgcolor="#FF8040">
@@ -52,10 +52,22 @@
   <td colspan="4" align="right">总价</td><td style="color:red;"><%=total %></td>
  </tr>
  <tr>
-  <td colspan="4"><a class="btn-buy" href="production<%=shop %>.jsp">返回商铺</a>&nbsp;</td><td><input name="submit" type="submit" value="删除所选商品" /></td>
+  <td colspan="4"><a class="btn-buy" href="production<%=shop %>.jsp">返回商铺</a>&nbsp;</td>
+  <td><a class="btn-buy" href="javascript:void(0)"  onclick="deleteCart();">删除所选商品</a>&nbsp;</td>
  </tr>
 </table>
   <input name="cartId" value="<%=cartId %>" type="hidden" />
 </form>
 </body>
+<script type="text/javascript">
+function deleteCart(){
+		if($("input[type=checkbox][name=proId]:checked").length==0){
+			alert("请选择删除商品!");
+			return;
+		}else{
+			$("#cartForm").submit();
+	    }
+}
+
+</script>
 </html>

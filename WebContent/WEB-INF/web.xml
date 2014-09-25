@@ -32,7 +32,7 @@
 	   <servlet-name>UpdateServlet</servlet-name>
 	   <url-pattern>/updateCart</url-pattern>
 	</servlet-mapping>
-
+</web-app>
 <!--
 	<servlet>
 	   <servlet-name>Welcome</servlet-name>
@@ -81,4 +81,4 @@
   	<url-pattern>/*</url-pattern>
   </filter-mapping>
   -->	  
-</web-app>
+
