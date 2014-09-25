@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="resource/css/css3.css"/>
 <script src="resource/js/jquery-1.11.1.js" type="text/javascript" ></script>
 </head>
-<body>
+<body  class="production">
      <nav  id="title_nav">
        <span id="title_span">展示商铺1</span>
      </nav>

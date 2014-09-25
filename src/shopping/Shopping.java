@@ -52,6 +52,7 @@ public class Shopping  extends HttpServlet {
     	Map shopCart =  new HashMap();
     	LinkedList<String> cartIds = new LinkedList<String>();
     	String userid = (String)request.getSession().getAttribute("userid");
+    	String shop =request.getParameter("shop");
     	
     	
     	Connection con = null;

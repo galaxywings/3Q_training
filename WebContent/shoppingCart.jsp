@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="resource/css/css3.css"/>
 <script src="resource/js/jquery-1.11.1.js" type="text/javascript" ></script>
 </head>
-<body>
+<body class="cart">
  <h1>购物车</h1>
  <form method="post" action="updateCart">
 
@@ -24,6 +24,7 @@
  <% 
     Map shopCart = (Map)request.getAttribute("shopCart");
     String cartId = (String)request.getAttribute("cartId");
+    String shop  =  request.getParameter("shop")==null?"":request.getParameter("shop");
  	Iterator it = shopCart.keySet().iterator(); 
  	int i = 0;
  	double total = 0.0;
@@ -51,7 +52,7 @@
   <td colspan="4" align="right">总价</td><td style="color:red;"><%=total %></td>
  </tr>
  <tr>
-  <td colspan="4"><a class="btn-buy" href="production.jsp">返回商铺</a>&nbsp;</td><td><input name="submit" type="submit" value="删除所选商品" /></td>
+  <td colspan="4"><a class="btn-buy" href="production<%=shop %>.jsp">返回商铺</a>&nbsp;</td><td><input name="submit" type="submit" value="删除所选商品" /></td>
  </tr>
 </table>
   <input name="cartId" value="<%=cartId %>" type="hidden" />

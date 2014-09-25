@@ -10,10 +10,15 @@ img, object{
  max-width: 100%;
 }
 
-body{
+body.production{
 	text-align: center;
 	height:700px;
-	background-image: url(../img/bgpic1.jpg);
+	background-image: url(../img/bgpic3.jpg);
+}
+
+body.cart{
+	text-align: center;
+	height:700px;
 }
 
 .layout{

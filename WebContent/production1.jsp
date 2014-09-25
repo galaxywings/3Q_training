@@ -11,13 +11,13 @@
 <link rel="stylesheet" href="resource/css/css3.css"/>
 <script src="resource/js/jquery-1.11.1.js" type="text/javascript" ></script>
 </head>
-<body>
+<body class="production">
      <nav  id="title_nav">
        <span id="title_span">展示商铺2</span>
      </nav>
 <section>
 <section class="layout">
- <form id="goodsForm" method="post" action="shopping">
+ <form id="goodsForm" method="post" action="shopping?shop=1">
   <input name="nextaction" value="add" type="hidden" />
   <input type="hidden" name="cart"  value="" />
   <div class="row">
